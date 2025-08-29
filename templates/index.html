@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles/style.css" />
+    <title>E-mail Classifier</title>
+  </head>
+  <body>
+    <main>
+      <h1>E-mail Classifier</h1>
+
+      <p id="description">
+        Classifique seus emails como <b>importantes</b> ou
+        <b>não importantes</b> e gere respostas automáticas!
+      </p>
+      <!-- Enviar formulário -->
+       <!-- Parte de dúvidas -->
+
+      <section>
+         
+      </section>
+      <form action="/classify" method="post">
+        <label for="email" id="text-label">Digite o Conteúdo do E-mail:</label
+        ><br />
+        <textarea
+          id="email"
+          name="email"
+          rows="10"
+          cols="50"
+          id="email-input-text"
+          required
+        ></textarea
+        ><br />
+        <!-- <label for="email-input-file" id="file-label">Selecionar arquivo</label>
+        <input type="file" name="email" accept=".txt,.pdf" id="email-input-file" /> -->
+
+        <input type="submit" value="Enviar" />
+      </form>
+    </main>
+  </body>
+</html>
