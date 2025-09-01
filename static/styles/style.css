@@ -65,6 +65,12 @@ form {
   align-items: center;
   padding: 48px 96px;
   border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+#text{
+  display: none;
+
 }
 
 #upload:hover {
@@ -92,6 +98,7 @@ nav {
     padding: 16px;
     margin-bottom: 16px;
 }
+
 nav button {
   font-size: 18px;
   padding: 8px 16px;
@@ -103,6 +110,8 @@ nav button {
   cursor: pointer;
 }
 
-nav button:hover {
+nav button:hover,
+nav button:focus,
+nav button.active {
   border-bottom: 3px solid orange;
 }

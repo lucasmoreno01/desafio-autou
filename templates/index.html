@@ -21,26 +21,28 @@
       <!-- Enviar formulário -->
       <!-- Parte de dúvidas -->
 
-      <!-- Alternar opções -->
 
       <nav>
-        <button type="button" id="nav-upload">Upload</button>
-        <button type="button" id="nav-texto">Texto</button>
+        <button type="button" id="nav-upload" class="active">Upload</button>
+        <button type="button" id="nav-text">Texto</button>
       </nav>
 
       <section>
         <form action="/classify" method="post" enctype="multipart/form-data">
-          <!-- <label for="email" class="email-label">Digite o Conteúdo do E-mail:</label
-          ><br />
-          <textarea
-            id="email"
-            name="email"
-            rows="10"
-            cols="50"
-            id="email-input-text"
-            required
-          ></textarea
-          ><br /> -->
+          <div id="text">
+            <label for="email" class="email-label"
+              >Digite o Conteúdo do E-mail:</label
+            ><br />
+            <textarea
+              id="email"
+              name="email"
+              rows="10"
+              cols="50"
+              id="email-input-text"
+              required
+            ></textarea
+            ><br />
+          </div>
 
           <div id="upload">
             <label for="email-input-file" style="cursor: pointer">
@@ -60,17 +62,10 @@
             />
           </div>
 
-          <input
-            type="file"
-            name="email"
-            accept=".txt,.pdf"
-            id="email-input-file"
-            style="display: none"
-          />
-
           <input type="submit" value="Enviar" id="submit-button" />
         </form>
       </section>
     </main>
   </body>
+  <script src="../static/controllers/screen_controler.js"></script>
 </html>
