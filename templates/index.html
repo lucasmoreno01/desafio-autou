@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/styles.css') }}"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=upload_file"
@@ -18,9 +21,6 @@
         Classifique seus emails como <b>importantes</b> ou
         <b>não importantes</b> e gere respostas automáticas!
       </p>
-      <!-- Enviar formulário -->
-      <!-- Parte de dúvidas -->
-
 
       <nav>
         <button type="button" id="nav-upload" class="active">Upload</button>
@@ -30,17 +30,17 @@
       <section>
         <form action="/classify" method="post" enctype="multipart/form-data">
           <div id="text">
-            <label for="email" class="email-label"
-              >Digite o Conteúdo do E-mail:</label
-            ><br />
+            <label for="email-input-text" class="email-label">
+              Digite o Conteúdo do E-mail:
+            </label>
+            <br />
             <textarea
               name="email"
               rows="10"
               cols="50"
               id="email-input-text"
-              required
-            ></textarea
-            ><br />
+            ></textarea>
+            <br />
           </div>
 
           <div id="upload">
@@ -51,7 +51,7 @@
               >
                 upload_file
               </span>
-
+            </label>
             <input
               type="file"
               name="email"
@@ -63,7 +63,17 @@
           <input type="submit" value="Enviar" id="submit-button" />
         </form>
       </section>
+
+      {% if result %}
+      <section id="result" style="display: block;">
+        <h2>Resultado:</h2>
+        <p><b>Categoria:</b> {{ result.category }}</p>
+        <p><b>Resposta:</b> {{ result.response }}</p>
+      </section>
+      {% endif %}
     </main>
+
+    <script src="{{ url_for('static', filename='controllers/screen_controler.js') }}"></script>
+    <script src="{{ url_for('static', filename='services/send_email_service.js') }}"></script>
   </body>
-  <script src="../static/controllers/screen_controler.js"></script>
 </html>

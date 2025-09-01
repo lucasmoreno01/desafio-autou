@@ -1,0 +1,15 @@
+# Ambientes virtuais
+env/
+env_Flask/
+venv/
+.venv/
+
+# Arquivos temporários
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configurações locais
+*.env
+.env

@@ -1,22 +1,18 @@
-const uploadOptionButton = document.getElementById("nav-upload")
-const textOptionButton = document.getElementById("nav-text")
-const uploadSection = document.getElementById("upload")
-const textSection = document.getElementById("text")
+const navUpload = document.getElementById("nav-upload");
+const navText = document.getElementById("nav-text");
+const uploadDiv = document.getElementById("upload");
+const textDiv = document.getElementById("text");
 
-uploadOptionButton.addEventListener("click", () =>
-  changeSendEmailMode(uploadOptionButton)
-)
-textOptionButton.addEventListener("click", () =>
-  changeSendEmailMode(textOptionButton)
-)
+navUpload.addEventListener("click", () => {
+  uploadDiv.style.display = "flex";
+  textDiv.style.display = "none";
+  navUpload.classList.add("active");
+  navText.classList.remove("active");
+});
 
-function changeSendEmailMode(activeitem) {
-  if (activeitem === uploadOptionButton) {
-    uploadSection.style.display = "flex"
-    textSection.style.display = "none"
-  } else if (activeitem === textOptionButton) {
-    textSection.style.display = "block"
-    uploadSection.style.display = "none"
-    uploadOptionButton.classList.remove("active")
-  }
-}
+navText.addEventListener("click", () => {
+  uploadDiv.style.display = "none";
+  textDiv.style.display = "block";
+  navUpload.classList.remove("active");
+  navText.classList.add("active");
+});

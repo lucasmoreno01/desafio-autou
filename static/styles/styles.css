@@ -26,7 +26,7 @@ section {
   align-items: center;
   border: #333 2px dashed;
   width: 80vw;
-  height: 60vh;
+  height: 50vh;
 }
 
 #description {
@@ -81,15 +81,13 @@ form {
   display: none;
 }
 
-#upload:hover {
-  background-color: #00000007;
-}
-
 .material-symbols-outlined {
-  color: #4a4a4a;
+  color: darkorange;
   margin: 16px;
 }
-
+.material-symbols-outlined:hover {
+  color: #333;
+}
 #email-input-file {
   font-size: 16px;
   padding: 8px;
@@ -123,4 +121,11 @@ nav button:hover,
 nav button:focus,
 nav button.active {
   border-bottom: 3px solid orange;
+}
+
+#result {
+  margin-top: 8px;
+  padding: 16px;
+  font-size: 24px;
+  height: max-content;
 }
