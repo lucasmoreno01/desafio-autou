@@ -43,6 +43,11 @@ textarea {
   margin: 24px 0;
 }
 
+textarea:focus {
+  border: darkred 2px solid;
+  outline: none;
+}
+
 #submit-button {
   font-size: 20px;
   padding: 10px 20px;
@@ -51,6 +56,10 @@ textarea {
   background-color: #333;
   color: white;
   cursor: pointer;
+}
+
+#submit-button:hover {
+  background-color: darkorange;
 }
 
 form {
@@ -68,9 +77,8 @@ form {
   margin-bottom: 16px;
 }
 
-#text{
+#text {
   display: none;
-
 }
 
 #upload:hover {
@@ -91,12 +99,13 @@ form {
   color: #333;
   cursor: pointer;
 }
+
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    padding: 16px;
-    margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 16px;
+  margin-bottom: 16px;
 }
 
 nav button {
